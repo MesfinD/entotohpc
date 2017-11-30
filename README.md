@@ -1,7 +1,7 @@
 # HPC
-# NYU HPC
+# ENTOTO HPC
 
-A quick reference to access NYU's High Performance Computing Entoto Cluster.
+A quick reference to access Chemistry's High Performance Computing on Entoto Cluster.
 
 
 
