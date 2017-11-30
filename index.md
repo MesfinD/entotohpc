@@ -1,7 +1,6 @@
-# Entoto High Performace Cluster
+# Entoto High Performace Computing Cluster
 
-
-A quick reference to access Chemistry's High Performance Computing on Entoto Cluster.
+A quick reference to access Entoto's High Performance Computing  Cluster at Chemistry Department, AAU.
 
 
 
@@ -40,7 +39,7 @@ ssh username@entoto.aau.edu.et
 Then login to the cluster:
 
 ```bash
-ssh prince.hpc.nyu.edu
+ssh entoto.aau.edu.et
 ```
 
 ## File Systems
@@ -218,7 +217,7 @@ Monitor the job:
 squeue -u $USER
 ```
 
-More info [here](https://wikis.nyu.edu/display/NYUHPC/Submitting+jobs+with+sbatch)
+
 
 ## Setting up a tunnel
 
@@ -249,11 +248,11 @@ touch config
 # packets on ports 8024, 8025 and 8026 through it and to specific
 # locations
 Host hpcgwtunnel
-   HostName gw.hpc.nyu.edu
+   HostName gw.entoto.aau.edu.et
    ForwardX11 no
-   LocalForward 8025 dumbo.hpc.nyu.edu:22
-   LocalForward 8026 prince.hpc.nyu.edu:22
-   User NetID 
+   LocalForward 8025 entoto.aau.edu.et:22
+   LocalForward 8026 entoto.aau.edu.et:22
+   Username 
 # next we create an alias for incoming packets on the port. The
 # alias corresponds to where the tunnel forwards these packets
 Host dumbo
@@ -269,7 +268,7 @@ Host prince
   User NetID
 ```
 
-Be sure to replace the `NetID` for your NYU NetId
+Be sure to replace the `NetID` for your AAU NetId
 
 ## Transfer Files
 
@@ -295,27 +294,25 @@ This will use the settings in `/.ssh/config` to create a tunnel. **You need to l
 
 - A File:
 ```bash
-scp /Users/local/data.txt Username@Ntoto:/scratch/NYUNetID/path/
+scp /Users/local/data.txt UserName@Ntoto:/scratch/UserName/path/
 ```
 
 - A Folder:
 ```bash
-scp -r /Users/local/path Username@Ntoto:/scratch/NYUNetID/path/
+scp -r /Users/local/path UserName@Ntoto:/scratch/UserName/path/
 ```
 
 ### Between the HPC and your computer
 
 - A File:
 ```bash
-scp NYUNetID@Ntoto:/scratch/NYUNetID/path/data.txt /Users/local/path/
+scp NYUNetID@Ntoto:/scratch/UserName/path/data.txt /Users/local/path/
 ```
 
 - A Folder:
 ```bash
-scp -r username@Ntoto:/scratch/NYUNetID/path/data.txt /Users/local/path/ 
+scp -r username@Ntoto:/scratch/UserName/path/data.txt /Users/local/path/ 
 ```
 
-## Screen
 
-Create a `./.screenrc` file and append this [gist](https://gist.github.com/joaopizani/2718397)
 
